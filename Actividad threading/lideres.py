@@ -2,12 +2,12 @@ from threading import Thread, Lock
 from time import sleep
 import random
 
-class Lider_mundial(Thread):
+class LiderMundial(Thread):
 
     twitear_lock = Lock()
 
     def __init__(self, nombre, tweets, enojo, reloj):
-        super(Lider_mundial,self).__init__()
+        super().__init__()
         self.daemon = True
         self.nombre = nombre
         self._enojo = enojo
@@ -34,7 +34,7 @@ class Lider_mundial(Thread):
     def twitear(self):
         with self.twitear_lock:
             tweet = self.tweets.pop()
-            print(f'{self.nombre}: {tweet[1]}')
-            self.reloj.acelerar(self.nombre, int(tweet[0]))
-            self.enojo += int(tweet[0])
+            print(f'{self.nombre}: {tweet.texto}')
+            self.reloj.acelerar(self.nombre, tweet.enojo)
+            self.enojo += tweet.enojo
             sleep(1)
