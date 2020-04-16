@@ -2,7 +2,7 @@ from threading import Thread, Lock
 from time import sleep
 import random
 
-class LiderMundial(Thread):
+class LiderMundial:
 
     def __init__(self, nombre, tweets, enojo, reloj):
         # Completar

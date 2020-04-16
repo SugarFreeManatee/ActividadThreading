@@ -2,7 +2,7 @@ from threading import Thread, Lock
 from time import sleep
 
 
-class Doomsday_Clock(Thread):
+class Doomsday_Clock:
 
     def __init__(self, speed, time):
         # Completar o modificar si es necesario
