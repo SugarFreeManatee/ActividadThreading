@@ -5,8 +5,11 @@ from time import sleep
 class Doomsday_Clock:
 
     def __init__(self, speed, time):
-        # Completar o modificar si es necesario
-        pass
+        # Completar
+
+        # No modificar
+        self._time = time
+        self.hora = 60 - self._time
 
     @property
     def time(self):

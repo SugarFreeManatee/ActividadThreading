@@ -6,9 +6,9 @@ class LiderMundial:
 
     def __init__(self, nombre, tweets, enojo, reloj):
         # Completar
-        pass
 
         # No borrar o modificar esto
+        self._enojo = enojo
         random.shuffle(self.tweets)
 
     @property
